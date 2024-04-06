@@ -5,10 +5,19 @@
     position: relative;
 
 }
+.patch2{
+    height: 40vw;
+    width: 39vw;
+    object-fit: cover;
+    position: absolute;
+    top: 6vw;
+    right: 6vw;
+
+}
 
 .text1 {
     position: absolute;
-    top: 5vw; /* adjust this value according to your preference */
+    top: 6vw; /* adjust this value according to your preference */
     left: 1vw; /* adjust this value according to your preference */
     color: white; /* or any color you prefer */
     font-size: 4.2vw; /* or any font size you prefer */
@@ -18,7 +27,7 @@
 }
 .text2 {
     position: absolute;
-    top: 9.5vw; /* adjust this value according to your preference */
+    top: 10.5vw; /* adjust this value according to your preference */
     left: 1vw; /* adjust this value according to your preference */
     color: white; /* or any color you prefer */
     font-size: 4.2vw; /* or any font size you prefer */
@@ -28,12 +37,71 @@
 }
 .text3 {
     position: absolute;
-    top: 16vw; /* adjust this value according to your preference */
+    top: 17vw; /* adjust this value according to your preference */
     left: 1vw; /* adjust this value according to your preference */
     color: white; /* or any color you prefer */
     font-size: 1.2vw; /* or any font size you prefer */
     color: rgb(255, 255, 255);
     font-weight: bold;
     /* text-shadow: 5px 5px 3px black; */
+}
+
+.discover{
+    position: absolute;
+    top: 24vw; /* adjust this value according to your preference */
+    left: 1vw;
+    border: solid 1px rgb(237, 226, 4);
+    font-size: 2vw;
+    font-weight: 600;
+    padding: 0.3vw 3vw;
+    border-radius: 50px;
+    background: rgb(223,185,29);
+    background: linear-gradient(142deg, rgba(223,185,29,0.9) 0%, rgba(255, 255, 255, 0.712) 100%);
+}
+
+.button {
+    /* background-color: #4CAF50;  */
+    border: none;
+    color: white;
+    align-self: center;
+    padding: 0.3vw 3vw;
+    text-align: center;
+    font-size: 2vw;
+    font-weight: 600;
+    margin: 2vw 1vw;
+    cursor: pointer;
+    position: absolute;
+    border-radius: 50px;
+    background-image: linear-gradient(to right, rgba(16,191,209,1), rgba(255,255,255,0)); 
+    /* border-radius: 12px;  */
+    background-image: linear-gradient(to right, #20c8f7, #eef5fb75); 
+
+  }
+  
+  .button_start{
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+.page2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+}
+
+.page2 > p{
+    color: white;
+    font-size: 2.5vw;
+    /* text-align: center; */
+}
+.page2 iframe{
+    align-content: center;
+    height: 35vw;
+    width: 90vw;
+    background: rgba(255, 255, 255, 0.31);
+    border-radius: 15px;
 }
 
