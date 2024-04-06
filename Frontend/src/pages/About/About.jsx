@@ -11,7 +11,7 @@ function Home() {
             <div className="right">
                   <img src={img} alt="" id="patch1" />
                   <div >
-                  <p className="text-white text-4xl md:text-6xl font-bold pt-10 md:pt-16 lg:pt-7 xl:pt-9 z-50 md:pr-0 xl:pr-9">About Us</p>
+                  <p id="aboutus" className="text-white text-4xl md:text-8xl font-bold pt-10 md:pt-16 lg:pt-7 xl:pt-9 z-50 md:pr-0 xl:pr-9" >About Us</p>
 
                   </div>
                 </div>

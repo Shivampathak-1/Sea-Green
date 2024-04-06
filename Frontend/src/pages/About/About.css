@@ -25,8 +25,8 @@
 }
 
 #patch1{
-    height: 18vw;
-    width: 32.5vw;
+    height: 41vw;
+    width: 59.5vw;
     object-fit: cover;
     position: relative;
     display: flex;
@@ -40,4 +40,11 @@
     display: flex;
     justify-content: end;
   
+}
+
+#aboutus{
+    padding-right: 4vmax;
+    color: rgb(214, 203, 0);
+    font-weight: bold;
+    text-shadow: 10px 10px 7px rgb(0, 0, 0);
 }
