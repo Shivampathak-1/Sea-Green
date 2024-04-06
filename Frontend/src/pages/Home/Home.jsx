@@ -23,6 +23,9 @@ function Home() {
                 <button className="button center">Let's Start</button>
               </div>
             </div>
+            <div className="page2">
+            <iframe title="hackskill" width="1140" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=0fb091d3-fc98-4cd5-a98c-6b9784037978&autoAuth=true&ctid=2c5bdaf4-8ff2-4bd9-bd54-7c50ab219590" frameborder="0" allowFullScreen="true"></iframe>
+            </div>
           </div>
         </div>
       </div>
