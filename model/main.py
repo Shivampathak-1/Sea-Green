@@ -3,9 +3,12 @@ import pandas as pd
 import PIL.Image
 from pathlib import Path
 from ultralytics import YOLO
-path="./Predict"
-df=pd.read_csv("submit.csv")
-model=YOLO('YOLO_Custom_v8m.pt')
+ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
+path=os.path.join(ROOT_DIR, 'Predict') 
+print(ROOT_DIR)
+MODEL = os.path.join(ROOT_DIR, 'YOLO_Custom_v8m.pt') 
+df=pd.read_csv(os.path.join(ROOT_DIR, 'submit.csv'))
+model = YOLO(MODEL)
 for i, files in enumerate(os.listdir(path)):
   model.predict(source=f"{path}/{files}", save=True, conf = 0.37)
   filepath = os.path.join(path, files)
@@ -19,4 +22,4 @@ for i, files in enumerate(os.listdir(path)):
   latitude=(float)((((ns[0]*60)+ns[1])*60)+ns[2])/60/60
   longitude=(float)((((ew[0]*60)+ew[1])*60)+ew[2])/60/60
   df.loc[i,'Geo_Tag_URL']=str(latitude)+"°N"+" "+str(longitude)+"°E" 
-  df.to_csv("submit.csv",index=False)
+  df.to_csv(os.path.join(ROOT_DIR, 'submit.csv'),index=False)
