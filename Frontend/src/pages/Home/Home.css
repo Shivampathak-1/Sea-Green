@@ -24,6 +24,7 @@
     height: 100%; 
 }
 
+
 .grad1{
     background: rgb(223,29,29);
     position: absolute;
@@ -57,3 +58,11 @@
     display: flex;
     justify-content: center;
   }
+.left {
+    background-image: url(../../assets/img1.png);
+    background-size:cover;
+    /* height: 37vw; */
+    width: 44.5vw;
+    /* height: 60vw; */
+}
+

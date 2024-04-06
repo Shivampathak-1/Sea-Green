@@ -10,8 +10,8 @@ function Home() {
           <div className="w-full p-0 min-h-screen" id="home1">
             <div className="w-full p-0 min-h-screen" id="home2">
               <div className="page1">
-                <div className="left">
-                  <img src={img} alt="" id="patch1" />
+                <div className="left h-96">
+                    <h1>Welcome to our website!</h1>
                 </div>
                 <div className="right"></div>
                 <div className="button_start">
