@@ -2,7 +2,9 @@
 #home {
     background-color: rgb(3, 0, 32);
     z-index: 10;
+    width: 100%;
     color: white;
+    position: relative;
 
 }
 
@@ -11,6 +13,8 @@
     background: linear-gradient(148deg, rgba(223,29,29,0.56) 0%, rgba(0,0,0,0) 35%);
     z-index: 20;
     height: 100%; 
+    width: 100%;
+    position: absolute;
 }
 
 
@@ -19,5 +23,7 @@
     background: linear-gradient(90deg, rgba(0,0,0,0) 31%, rgba(1,93,160,0.6111694677871149) 100%);
     z-index: 30;
     height: 100%; 
+    width: 100%;
+    position: relative;
 }
 
