@@ -32,7 +32,28 @@
     height: 100%; 
 }
 #patch1{
-    height: 37vw;
-    width: 32.5vw;
+    height: 43vw;
+    width: 39.5vw;
     object-fit: cover;
 }
+
+.button {
+    background-color: #4CAF50; 
+    border: none;
+    color: white;
+    align-self: center;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    position: absolute;
+    border-radius: 12px; 
+    background-image: linear-gradient(to right, #4CAF50, #2196F3); 
+  }
+  
+  .button_start{
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }

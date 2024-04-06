@@ -1,6 +1,6 @@
 import React from "react";
 import "./Home.css";
-import img from '../../assets/img1.png'
+import img from "../../assets/img1.png";
 function Home() {
   return (
     <>
@@ -11,10 +11,11 @@ function Home() {
             <div className="w-full p-0 min-h-screen" id="home2">
               <div className="page1">
                 <div className="left">
-                    <img src={img} alt="" id="patch1"/>
+                  <img src={img} alt="" id="patch1" />
                 </div>
-                <div className="right">
-
+                <div className="right"></div>
+                <div className="button_start">
+                  <button className="button center">Let's Start</button>
                 </div>
               </div>
             </div>
