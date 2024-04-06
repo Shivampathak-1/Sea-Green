@@ -1,20 +1,22 @@
 import React from 'react'
 import './Navbar.css'
+import logo from '../../assets/logo.png'
 function Navbar() {
   return (
     <>
       {/* <h1>Navbar</h1> */}
-      <div className="container h-14 flex justify-between items-center" id ='navbar'>
+      <div className="h-14 flex justify-between items-center" id ='navbar'>
           <div className="left">
-            <span className=' ml-10 ' id='logoName'>SeaGreen</span>
+            {/* <span className=' ml-10 ' id='logoName'>Sea_Green</span> */}
+            <img src={logo} alt="logo" className=' ml-10' />
           </div>
           <div className="right flex justify-between items-center gap-4">
-            <div>
+            <div className='menubtn'>
             <ul className='flex items-center gap-4'>
-              <li>Home</li>
-              <li>About</li>
-              <li>Services</li>
-              <li>Contact</li>
+              <a href="/"><li>Home</li></a>
+              <a href="/about"><li>About</li></a>
+              <a href="services"><li>Services</li></a>
+              <a href="contact"><li>Contact</li></a>
             </ul>
 
             </div>
