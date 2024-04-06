@@ -3,17 +3,22 @@
     font-weight: bold;
     font-family: Georgia, 'Times New Roman', Times, serif;
     width: 100%;
+    color:rgba(143, 4, 4, 0.811) ;
 }
 #navbar{
     background-color: rgb(200, 239, 255,1);
     box-shadow:4px 10px 25px black;
-    /* z-index: 500; */
+
 }
 
 li{
     font-size:1.5vw;
     font-weight: bold;
+    color: rgb(84, 93, 93);
     font-family: Georgia, 'Times New Roman', Times, serif;
+}
+li:hover{
+    color: rgb(226, 39, 39);
 }
 .menubtn{
     display: block;
