@@ -1,6 +1,6 @@
 import React from 'react';
 import './Footer.css'; // Import CSS file for styling
-import img from "../Images/HackSyncHacksync logo.png"
+import img from "../../assets/logo1.png";
 function Footer() {
   return (
     <footer className="footer">
