@@ -27,7 +27,7 @@
 
 
 .button {
-    background-color: #4CAF50; 
+    /* background-color: #4CAF50;  */
     border: none;
     color: white;
     align-self: center;
@@ -37,8 +37,12 @@
     margin: 4px 2px;
     cursor: pointer;
     position: absolute;
+
     border-radius: 25px; 
     background-image: linear-gradient(to right, rgba(16,191,209,1), rgba(255,255,255,0)); 
+    border-radius: 12px; 
+    background-image: linear-gradient(to right, #20c8f7, #eef5fb75); 
+
   }
   
   .button_start{

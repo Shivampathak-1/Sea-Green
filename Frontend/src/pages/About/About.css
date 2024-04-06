@@ -1,0 +1,50 @@
+.main{
+    width: 100%;
+}
+#home {
+    background-color: rgb(3, 0, 32);
+    z-index: 10;
+    width: 100%;
+    color: white;
+
+}
+
+#home1 {
+    background: rgb(223,29,29);
+    position: absolute;
+    background: linear-gradient(148deg, rgba(223,29,29,0.56) 0%, rgba(0,0,0,0) 35%);
+    z-index: 20;
+    height: 100%; 
+}
+
+
+#home2 {
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,0) 31%, rgba(1,93,160,0.6111694677871149) 100%);
+    height: 100%; 
+}
+
+#patch1{
+    height: 41vw;
+    width: 59.5vw;
+    object-fit: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+}
+
+.right{
+    align-content: end;
+    position: relative;
+    display: flex;
+    justify-content: end;
+  
+}
+
+#aboutus{
+    padding-right: 4vmax;
+    color: rgb(214, 203, 0);
+    font-weight: bold;
+    text-shadow: 10px 10px 7px rgb(0, 0, 0);
+}

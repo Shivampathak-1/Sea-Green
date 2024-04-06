@@ -16,8 +16,8 @@ function Navbar() {
             <ul className='flex items-center gap-16'>
               <a href="/"><li>Home</li></a>
               <a href="/about"><li>About</li></a>
-              <a href="services"><li>Services</li></a>
-              <a href="contact"><li>Contact</li></a>
+              <a href="/services"><li>Services</li></a>
+              <a href="/contact"><li>Contact</li></a>
             </ul>
 
             </div>
