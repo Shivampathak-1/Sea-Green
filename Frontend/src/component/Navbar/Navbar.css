@@ -1,10 +1,26 @@
 #logoName{
-
+    font-size:2.5vw;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 100%;
 }
 #navbar{
     background-color: rgb(200, 239, 255,1);
+    box-shadow:4px 10px 25px black;
 }
 
 li{
-    
+    font-size:1.5vw;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
+.menubtn{
+    display: block;
+}
+
+@media screen and (max-width: 480px) {
+    body {
+      background-color: lightgreen;
+    }
+  }
+
