@@ -14,14 +14,16 @@ function Home() {
                 <span className="text1">Discovering the</span>
                 <span className="text2">Depths</span>
                 <span className="text3">Unveiling the Secrets of Plastic Pollution in Our Oceans</span>
-                {/* <div className="button_start">
-                  <button className="button center">Let's Start</button>
-                </div> */}
+                <div>
+                  <a href="/discover" id="disc">Discover</a>
+                </div>
               </div>
               <div className="right"></div>
               <div className="button_start">
                 <button className="button center">Let's Start</button>
               </div>
+            </div>
+            <div className="page2 mt-36">
             </div>
           </div>
         </div>
