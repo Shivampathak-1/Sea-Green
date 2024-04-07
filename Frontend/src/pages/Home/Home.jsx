@@ -22,7 +22,7 @@ function Home() {
             </div>
             <img src={img2} alt="patch2" className="patch2" />
             <div className="button_start">
-              <button className="button center">Let's Start</button>
+              <a href="/let-start" className="button center">Let's Start</a>
             </div>
           </div>
         </div>

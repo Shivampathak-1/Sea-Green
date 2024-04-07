@@ -22,6 +22,8 @@ function App() {
           <Route path="/let-start" element={<InsertionPage />}></Route>
           <Route path="/login" element={<Login/>}></Route>
           <Route path="/SignUp" element={<SignUp/>}></Route>
+          <Route path="/let-start" element={<InsertionPage/>}></Route>
+
         </Routes>
         <Footer />
       </Router>
