@@ -4,7 +4,7 @@ import img from "../../assets/logo1.png";
 function Footer() {
   return (
     <footer className="footer">
-      <div className="container">
+      <div className="w-screen">
         <div className="footer-content">
           <div className="footer-left">
             <img src={img} alt="Company Logo" style={{"width":"70%" ,"marginTop": "20px"}}/>
