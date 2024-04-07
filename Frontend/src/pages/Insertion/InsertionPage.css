@@ -121,7 +121,6 @@
 
 
 
-
 .vertical-grid {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr; /* Three rows with equal height */

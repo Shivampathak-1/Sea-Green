@@ -22,9 +22,14 @@ function Navbar() {
             </ul>
 
             </div>
+
             <Link to='/login' className=' mr-20 rounded'>
               <img src={profile} className=' h-10 rounded-2xl' alt="Profile Image" />
             </Link>
+
+            <a href='/login' className=' mr-20 rounded'>
+              <img src={profile} className=' h-10 rounded-2xl' alt="Profile Image" />
+            </a>
           </div>
       </div>
     </>
