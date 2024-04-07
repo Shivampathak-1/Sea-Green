@@ -1,28 +1,3 @@
-.main{
-    width: 100%;
-}
-#home {
-    background-color: rgb(3, 0, 32);
-    z-index: 10;
-    width: 100%;
-    color: white;
-
-}
-
-#home1 {
-    background: rgb(223,29,29);
-    position: absolute;
-    background: linear-gradient(148deg, rgba(223,29,29,0.56) 0%, rgba(0,0,0,0) 35%);
-    z-index: 20;
-    height: 100%; 
-}
-
-
-#home2 {
-    background: rgb(0,0,0);
-    background: linear-gradient(90deg, rgba(0,0,0,0) 31%, rgba(1,93,160,0.6111694677871149) 100%);
-    height: 100%; 
-}
 
 #patch1{
     height: 41vw;
