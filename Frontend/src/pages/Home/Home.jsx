@@ -2,7 +2,7 @@ import React from "react";
 import img from "../../assets/img1.png";
 import img2 from "../../assets/img3.png";
 import img4 from "../../assets/img4.png";
-import img5 from '../../assets/img5.png';
+import img5 from "../../assets/img5.png";
 import "./Home.css";
 function Home() {
   return (
@@ -98,8 +98,48 @@ function Home() {
             </p>
           </div>
         </div>
-        <div className="page5 h-screen">
-          
+        <div className="page5 h-screen flex items-start justify-center">
+          <div className="page5m flex items-center justify-center">
+            <div className="page5mt">
+              <span id="text-1">WHY?</span>
+              <span className="text-2">Use Our Platform</span>
+            </div>
+            <p className="text-2 -mt-8 ml-24">and the Benefits of Our Project</p>
+            <p className="text-3">
+              Our platform offers a cutting-edge solution to address the
+              pressing issue of marine plastic pollution through innovative
+              technology and real-time data analysis. By leveraging advanced
+              techniques such as drone imaging, submarine monitoring, and live
+              data analysis, our project provides several compelling benefits:
+            </p>
+          </div>
+        </div>
+        <div className="page6 h-screen flex items-start justify-center">
+          <div className="page6m w-screen">
+            <div className="page6m1 flex items-center justify-around text-white">
+              <ul>
+                <li>Accurate Detection of Plastic Objects</li>
+                <li>Real-Time Monitoring</li>
+                <li>Comprehensive Analysis</li>
+              </ul>
+              <ul>
+                <li>Support for Conservation Efforts</li>
+                <li>Data Visualization and Reporting</li>
+                <li>Early Warning System</li>
+              </ul>
+            </div>
+            <p className="page6m2">
+            Yet perhaps the most powerful aspect of our platform is our commitment to collaboration. We understand that solving such a complex and multifaceted problem requires the combined efforts of diverse stakeholders, including governments, NGOs, businesses, and local communities. That's why we foster partnerships and forge alliances across sectors and borders, pooling resources, expertise, and knowledge to amplify our impact. In summary, our platform offers a powerful combination of technology, data analysis, and collaborative efforts to address the urgent issue of marine plastic pollution. By leveraging these capabilities, we can make significant strides towards a cleaner, healthier, and more sustainable marine environment.
+            </p>
+          </div>
+        </div>
+        <div className="page7 h-screen flex items-center justify-center mt-32">
+          <div className="page7m">
+
+          <p className="t1">Contact <span>Us</span></p>
+          <p className="t2">⭐⭐⭐</p>
+          <p className="t3">Support@HackSync.com</p>
+          </div>
         </div>
       </div>
     </>

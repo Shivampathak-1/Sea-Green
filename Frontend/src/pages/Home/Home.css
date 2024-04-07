@@ -152,3 +152,78 @@
     margin-left: 2vw;
     color: rgb(255, 200, 0);
 }
+.page5m{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#text-1{
+    font-size: 7vw;
+    color: red;
+    font-weight: bold;
+}
+.text-2{
+    color: white;
+    font-size: 2vw;
+    font-weight: bold;
+}
+.text-3{
+    width: 70vw;
+    font-size: 2vw;
+    color: white;
+    margin-top: 7vw;
+    text-align: center;
+}
+
+.page6m{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+}
+.page6m1{
+    width: 80vw;
+}
+.page6m1 > ul{
+    list-style-type: disc;
+    font-size: 2vw;
+    margin-top: -4vw;
+}
+.page6m1 > ul > li{
+    margin-bottom: 1.5vw;
+}
+.page6m2{
+    font-size: 2vw;
+    color: white;
+    margin-top: 7vw;
+    text-align: center;
+    width: 70vw;
+}
+
+.page7m{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    gap: 3vw;
+    height:100%;
+}
+.t1{
+    font-size: 8vw;
+    font-weight: bold;
+    /* margin-top: vw; */
+    color: white;
+}
+.t1 > span{
+    color: red;
+}
+.t2{
+    font-size: 3vw;
+    text-align: center;
+}
+.t3{
+    font-size: 4vw;
+    font-weight: bold;
+    color: white;
+}
+
