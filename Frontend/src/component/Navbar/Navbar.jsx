@@ -13,11 +13,11 @@ function Navbar() {
           </div>
           <div className="right flex justify-between items-center gap-16">
             <div className='menubtn'>
-            <ul className='flex items-center gap-16'>
-              <a href="/"><li>Home</li></a>
-              <a href="/about"><li>About</li></a>
-              <a href="/services"><li>Services</li></a>
-              <a href="/contact"><li>Contact</li></a>
+            <ul className='flex items-center gap-16 navull'>
+              <a href="/"><li className='navlink'>Home</li></a>
+              <a href="/about"><li className='navlink'>About</li></a>
+              <a href="/services"><li className='navlink'>Services</li></a>
+              <a href="/contact"><li className='navlink'>Contact</li></a>
             </ul>
 
             </div>
