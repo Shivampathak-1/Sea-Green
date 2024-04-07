@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    
+
 }
 .heading{
     color: rgb(234, 158, 5);
@@ -57,6 +57,6 @@
     border-radius: 15px;
     margin-top: 0.5vw;
 }
-.already a{
+.already > a{
     color: red;
 }

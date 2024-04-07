@@ -2,6 +2,7 @@ import React from "react";
 import img from "../../assets/img1.png";
 import img2 from "../../assets/img3.png";
 import img4 from "../../assets/img4.png";
+import img5 from '../../assets/img5.png';
 import "./Home.css";
 function Home() {
   return (
@@ -25,7 +26,6 @@ function Home() {
             </div>
           </div>
         </div>
-
         <div className="page2 h-screen">
           <p>Real Time between Year vs Marine plastic pollution</p>
           <iframe
@@ -69,7 +69,7 @@ function Home() {
         </div>
         <div className="page4 h-screen flex items-center justify-center">
           <div className="page3m">
-            <img src={img4} alt="turtle image" className="patch4" />
+            <img src={img5} alt="turtle image" className="patch4" />
             <p>
               <h1>Take Action Against Marine Plastic Pollution</h1>
               Marine plastic pollution is a global crisis that demands action
