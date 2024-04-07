@@ -51,7 +51,11 @@ class ImagesSendView(APIView):
             print("data: ",request.data)
             if serializer.is_valid():
                 serializer.save()
+
                 return Response({"status": "ok", "data": serializer.data}, status=status.HTTP_201_CREATED)
+
+                return Response({"status":"ok","url":serializer.data['image']}, status=status.HTTP_201_CREATED)
+
             else:
                 return Response({"status": "error", "error": serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
         except Exception as e:

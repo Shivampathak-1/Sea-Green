@@ -69,7 +69,11 @@
     background: linear-gradient(142deg, rgba(223,185,29,0.9) 0%, rgba(255, 255, 255, 0.712) 100%);
 }
 
-.button {
+.discover:hover{
+    background: rgb(223,185,29);
+}
+
+.buttonmain {
     /* background-color: #4CAF50;  */
     border: none;
     color: white;
@@ -87,6 +91,10 @@
     background-image: linear-gradient(to right, #20c8f7, #eef5fb75); 
 
   }
+
+  .buttonmain:hover{
+    background: rgba(16,191,209,1);
+  }
   
   .button_start{
     position: relative;
@@ -103,8 +111,9 @@
 }
 
 .page2 > p{
-    color: white;
+    color: rgb(236, 198, 6);
     font-size: 2.5vw;
+    font-weight: bold;
     /* text-align: center; */
 }
 .page2 iframe{
@@ -205,7 +214,7 @@
     align-items: center;
     justify-content: start;
     flex-direction: column;
-    gap: 3vw;
+    gap: 1.5vw;
     height:100%;
 }
 .t1{
