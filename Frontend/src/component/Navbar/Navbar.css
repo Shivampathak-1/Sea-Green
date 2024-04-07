@@ -11,13 +11,13 @@
 
 }
 
-li{
+.navul > li{
     font-size:1.5vw;
     font-weight: bold;
     color: rgb(84, 93, 93);
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
-li:hover{
+.navul > li:hover{
     color: rgb(226, 39, 39);
 }
 .menubtn{
