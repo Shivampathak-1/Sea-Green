@@ -24,9 +24,9 @@ li:hover{
     display: block;
 }
 
-@media screen and (max-width: 480px) {
+/* @media screen and (max-width: 480px) {
     body {
       background-color: lightgreen;
     }
-  }
+  } */
 

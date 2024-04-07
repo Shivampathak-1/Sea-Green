@@ -1,46 +1,79 @@
-/* .main{
-    width: 100%;
-} */
-#home {
-    background-color: rgb(3, 0, 32);
-    z-index: 10;
-    width: 100%;
-    color: white;
+.patch{
+    height: 43vw;
+    width: 38vw;
+    object-fit: cover;
+    position: relative;
+
 }
-
-
-#home1 {
-    background: rgb(223,29,29);
+.patch2{
+    height: 40vw;
+    width: 39vw;
+    object-fit: cover;
     position: absolute;
-    background: linear-gradient(148deg, rgba(223,29,29,0.56) 0%, rgba(0,0,0,0) 35%);
-    z-index: 20;
-    height: 100%; 
+    top: 6vw;
+    right: 6vw;
+
 }
 
-
-#home2 {
-    background: rgb(0,0,0);
-    background: linear-gradient(90deg, rgba(0,0,0,0) 31%, rgba(1,93,160,0.6111694677871149) 100%);
-    height: 100%; 
+.text1 {
+    position: absolute;
+    top: 6vw; /* adjust this value according to your preference */
+    left: 1vw; /* adjust this value according to your preference */
+    color: white; /* or any color you prefer */
+    font-size: 4.2vw; /* or any font size you prefer */
+    color: rgb(237, 226, 4);
+    font-weight: bold;
+    text-shadow: 5px 5px 3px black;
+}
+.text2 {
+    position: absolute;
+    top: 10.5vw; /* adjust this value according to your preference */
+    left: 1vw; /* adjust this value according to your preference */
+    color: white; /* or any color you prefer */
+    font-size: 4.2vw; /* or any font size you prefer */
+    color: rgb(237, 226, 4);
+    font-weight: bold;
+    text-shadow: 5px 5px 3px black;
+}
+.text3 {
+    position: absolute;
+    top: 17vw; /* adjust this value according to your preference */
+    left: 1vw; /* adjust this value according to your preference */
+    color: white; /* or any color you prefer */
+    font-size: 1.2vw; /* or any font size you prefer */
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    /* text-shadow: 5px 5px 3px black; */
 }
 
-
+.discover{
+    position: absolute;
+    top: 24vw; /* adjust this value according to your preference */
+    left: 1vw;
+    border: solid 1px rgb(237, 226, 4);
+    font-size: 2vw;
+    font-weight: 600;
+    padding: 0.3vw 3vw;
+    border-radius: 50px;
+    background: rgb(223,185,29);
+    background: linear-gradient(142deg, rgba(223,185,29,0.9) 0%, rgba(255, 255, 255, 0.712) 100%);
+}
 
 .button {
     /* background-color: #4CAF50;  */
     border: none;
     color: white;
     align-self: center;
-    padding: 15px 32px;
+    padding: 0.3vw 3vw;
     text-align: center;
-    font-size: 16px;
-    margin: 4px 2px;
+    font-size: 2vw;
+    font-weight: 600;
+    margin: 2vw 1vw;
     cursor: pointer;
     position: absolute;
-
-    border-radius: 25px; 
+    border-radius: 50px;
     background-image: linear-gradient(to right, rgba(16,191,209,1), rgba(255,255,255,0)); 
-    border-radius: 12px; 
+    /* border-radius: 12px;  */
     background-image: linear-gradient(to right, #20c8f7, #eef5fb75); 
 
   }
@@ -51,54 +84,24 @@
     justify-content: center;
   }
 
-.patch{
-    height: 43vw;
-    width: 38vw;
-    object-fit: cover;
-    position: relative;
-
-}
-.text1 {
-    position: absolute;
-    top: 3vw; /* adjust this value according to your preference */
-    left: 1vw; /* adjust this value according to your preference */
-    color: white; /* or any color you prefer */
-    font-size: 4.2vw; /* or any font size you prefer */
-    color: rgb(237, 226, 4);
-    font-weight: bold;
-    text-shadow: 5px 5px 3px black;
-}
-.text2 {
-    position: absolute;
-    top: 7.5vw; /* adjust this value according to your preference */
-    left: 1vw; /* adjust this value according to your preference */
-    font-size: 4.2vw; /* or any font size you prefer */
-    color: rgb(237, 226, 4);
-    font-weight: bold;
-    text-shadow: 5px 5px 3px black;
-}
-.text3 {
-    position: absolute;
-    top: 14vw; /* adjust this value according to your preference */
-    left: 1vw; /* adjust this value according to your preference */
-    font-size: 1.2vw; /* or any font size you prefer */
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-    /* text-shadow: 5px 5px 3px black; */
-}
-#disc{
-    position: absolute;
-    top: 20vw;
-    left: 1vw;
-    background: rgb(255,197,46);
-    background: linear-gradient(90deg, rgb(237, 226, 4) 10%, rgba(255, 255, 255, 0));
-    border: solid 1px rgb(237, 226, 4);
-    padding: 0vw 3vw;
-    font-weight: 500;
-    color: black;
-    border-radius: 25px;
-    font-size: 2vw;
+.page2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
 }
 
-
+.page2 > p{
+    color: white;
+    font-size: 2.5vw;
+    /* text-align: center; */
+}
+.page2 iframe{
+    align-content: center;
+    height: 35vw;
+    width: 90vw;
+    background: rgba(255, 255, 255, 0.31);
+    border-radius: 15px;
+}
 
