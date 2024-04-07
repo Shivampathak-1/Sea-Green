@@ -4,6 +4,7 @@ import img2 from "../../assets/img3.png";
 import img4 from "../../assets/img4.png";
 import img5 from "../../assets/img5.png";
 import "./Home.css";
+import { Link } from "react-router-dom";
 function Home() {
   return (
     <>
@@ -18,11 +19,14 @@ function Home() {
             </span>
             <span className="text4">plastic pollution.</span>
             <div className="discover">
-              <a href="/">Discover</a>
+              <a href="#discover">Discover</a>
             </div>
             <img src={img2} alt="patch2" className="patch2" />
             <div className="button_start">
-              <a href="/let-start" className="button center">Let's Start</a>
+
+              {/* <Link to='/let-start' className="button center">Let's Start</Link> */}
+
+              <a href="/let-start" className="buttonmain center">Let's Start</a>
             </div>
           </div>
         </div>
@@ -37,7 +41,7 @@ function Home() {
             width={500}
           ></iframe>
         </div>
-        <div className="page3 h-screen flex items-center justify-center">
+        <div className="page3 h-screen flex items-center justify-center" id="discover">
           <div className="page3m">
             <p>
               <h1>The Ecological Impact of Marine Plastic Pollution</h1>

@@ -4,8 +4,13 @@ import img1 from "../../assets/Group2(1).png";
 import img2 from "../../assets/outputex.jpg";
 import gray_img from "../../assets/gray_img.jpg"
 import "./InsertionPage.css";
-import AddCircleOutlineIcon from "@mui/icons-material/AddAPhotoRounded";
+import AddIcon from '@mui/icons-material/Add';
+import CameraAltIcon from '@mui/icons-material/CameraAlt';
+import OnlinePredictionIcon from '@mui/icons-material/OnlinePrediction';
 import ProcessingBar from '../../component/Proccessbar/Proccessbar.jsx';
+import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
+import Webcam  from "react-webcam";
+
 {
   /* <input type="file" onChange={handleFileChange} />
       <button onClick={handleUpload}>Upload</button>
@@ -20,6 +25,11 @@ function InsertionPage() {
   const img_prev = useRef(null);
   const [loading, setLoading] = useState(false);
 
+  const [openWebCam, setopenWebCam] = useState(false);
+
+  const [img, setImg] = useState("")
+
+
   const startLoading = () => {
     setLoading(true);
     img_prev.current.src=gray_img;
@@ -29,6 +39,7 @@ function InsertionPage() {
     }, 3000);
 
   };
+
   const [imageUrl, setImageUrl] = useState('');
   const [image, setImage] = useState(null)
   const [result, setResult] = useState('');
@@ -45,6 +56,27 @@ function InsertionPage() {
       reader.readAsDataURL(file);
       setImage(file)
       setResult('')
+
+  const handleFileChange = async (event) => {
+    setSelectedFile(event.target.files[0]);
+    event.preventDefault()
+    const form = new FormData()
+    form.append("image", selectedFile)
+    form.append("user",window.localStorage.getItem("user_id"))
+    const res = await fetch("http://127.0.0.1:8000/api/image-upload/", {
+      method:"POST",
+      headers:{
+        "Content-Type": "application/json"
+      },
+      body:JSON.stringify(form)
+    })
+
+    const resJson = await res.json()
+    if(resJson.status=="ok"){
+      setImg(resJson.url)
+    }else{
+      alert(resJson.error)
+
     }
   };
 
@@ -73,6 +105,7 @@ function InsertionPage() {
     }
   };
 
+
   const handlePredict = async(e)=>{
     e.preventDefault();
     const res = await fetch("http://127.0.0.1:8000/api/image-detect/",{
@@ -93,11 +126,23 @@ function InsertionPage() {
     }
   }
 
+  const handleWebcam = () => {
+    if(openWebCam){
+        setopenWebCam(false);
+    }else{
+    setopenWebCam(true);
+    }
+    
+  };
+
+
   return (
     <>
+       <button onClick={handleWebcam} style={{marginTop:"3vmax",marginLeft:"2vmax"}}><CameraAltIcon/></button> 
+       {openWebCam && <Webcam />}
       <div className="button-container">
         <button className="button" onClick={handleButtonClick}>
-          <AddCircleOutlineIcon />
+          <AddIcon/>
           Insert
         </button>
         <input
@@ -109,6 +154,7 @@ function InsertionPage() {
           style={{ display: "none" }} // Hide the file input
         />
         <div className="preview" >
+
           <img ref={img_prev} src={imageUrl} alt="" width={920} height={920}/>
         </div>
         <ProcessingBar loading={loading} />
@@ -118,6 +164,13 @@ function InsertionPage() {
         </button>
         <button className="button center" onClick={handlePredict}>
           <AddCircleOutlineIcon />
+
+          <img ref={img_prev} src={img} alt="" width={920} height={920}/>
+        </div>
+        <ProcessingBar loading={loading} />
+        <button className="button center" onClick={handlePredClick}>
+          <OnlinePredictionIcon/>
+
           Predict
         </button>
       </div>
