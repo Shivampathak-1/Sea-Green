@@ -21,9 +21,9 @@ function Navbar() {
             </ul>
 
             </div>
-            <div className=' mr-20 rounded'>
+            <a href='/login' className=' mr-20 rounded'>
               <img src={profile} className=' h-10 rounded-2xl' alt="Profile Image" />
-            </div>
+            </a>
           </div>
       </div>
     </>
