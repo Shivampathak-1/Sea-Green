@@ -1,0 +1,149 @@
+.image1{
+    height: 25vw;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.container1{
+    height: fit-content;
+}
+
+.button {
+    
+    border: none;
+    color: white;
+    align-self: center;
+    padding: 0.3vw 3vw;
+    text-align: center;
+    font-size: 2vw;
+    font-weight: 600;
+    margin: 2vw 1vw;
+    cursor: pointer;
+    position: relative;
+    border-radius: 50px;
+    background-image: linear-gradient(to right, rgba(16,191,209,1), rgba(255,255,255,0)); 
+    border-radius: 12px; 
+    background-image: linear-gradient(to right, #20c8f7, #eef5fb75); 
+
+  }
+
+  .button-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1vmin;
+  }
+  
+  .preview{
+    height: fit-content;
+  }
+
+  .button_insert{
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  .image1 {
+    position: relative;
+    text-align: center;
+  }
+  
+  /* .image1 img {
+    max-width: 100%;
+    height: auto;
+  } */
+  
+  .button_insert {
+    position: absolute;
+    /* top: 30%;
+    left: 50%; */
+    transform: translate(-50%, -50%);
+  }
+  
+  .button {
+    background-color: #f4f6f4;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 12px;
+    background-image: linear-gradient(to right, #d72871, #2195f305);
+  }
+  
+  @media (max-width: 170px) {
+    .button_insert {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: none;
+    }
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns with equal width */
+    gap: 20px; /* Gap between grid items */
+  }
+  
+  .grid-item {
+    padding: 10px;
+    text-align: right;
+    justify-self: center;
+    
+  }
+
+  #img1 {
+    max-width: 100%;
+    height: 60%;
+  }
+  
+  .img2{
+    max-width: 35vw;
+    height: 25vw;
+    border-radius: 12px;
+    align-self:flex-end;
+  }
+
+  .rec{
+    color: white;
+  }
+  .predBut{
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  .page3m{
+    height:fit-content;
+    width: fit-content;
+    border: solid white 2px;
+    color: white;
+    background: rgba(255, 255, 255, 0.253);
+    border-radius: 50px;
+    padding: 2vw 2vw;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.3vw;
+}
+
+
+.vertical-grid {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr; /* Three rows with equal height */
+    gap: 20px; /* Gap between grid items */
+    height: 300px; /* Set a fixed height for the grid */
+  }
+  
+  .grid-item1 {
+    
+   
+    text-align: center;
+    align-self: flex-start;
+  }
+  

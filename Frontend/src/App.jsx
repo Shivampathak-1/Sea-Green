@@ -6,6 +6,7 @@ import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
 import Services from "./pages/Services/Services";
 import Footer from "./component/Footer/Footer";
+import InsertionPage from "./pages/Insertion/InsertionPage";
 import Login from "./pages/Login/Login";
 import SignUp from "./pages/SignUp/SignUp";
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path="/SignUp" element={<SignUp/>}></Route>
 
         </Routes>
+        <InsertionPage/>
         <Footer />
       </Router>
     </>
