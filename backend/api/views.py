@@ -55,7 +55,7 @@ class ImagesSendView(APIView):
                 return Response({"status":"unauthorized","error":"login required"}, status=status.HTTP_401_UNAUTHORIZED)
             if serializer.is_valid(raise_exception=True):
                 serializer.save()
-                return Response({"status":"ok","data":serializer.data}, status=status.HTTP_201_CREATED)
+                return Response({"status":"ok","url":serializer.data['image']}, status=status.HTTP_201_CREATED)
             else:
                 return Response({"status":"exception","error":"can't be created"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
         except Exception as e:
