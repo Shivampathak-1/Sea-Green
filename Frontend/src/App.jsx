@@ -6,17 +6,19 @@ import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
 import Services from "./pages/Services/Services";
 import Footer from "./component/Footer/Footer";
+import InsertionPage from "./pages/Insertion/InsertionPage";
 function App() {
   return (
     <>
       <Router>
         <Navbar/>
-        <Routes>
+        {/* <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/about" element={<About />}></Route>
           <Route path="/contact" element={<Contact />}></Route>
           <Route path="/services" element={<Services />}></Route>
-        </Routes>
+        </Routes> */}
+        <InsertionPage/>
         <Footer />
       </Router>
     </>
