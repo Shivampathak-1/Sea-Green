@@ -21,10 +21,10 @@ class User(AbstractUser):
     
 
 class Images(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.CharField(max_length=60)
     image = models.ImageField(upload_to='predict_images/')
     pred_image = models.ImageField(upload_to='predicted_images/', null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     
     def __str__(self) -> str:
-        return self.user.email
+        return self.user

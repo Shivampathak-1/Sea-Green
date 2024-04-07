@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import img from "../../assets/Group3(1).png";
+// import img from "../../assets/Group3(1).png";
 import img1 from "../../assets/Group2(1).png";
 import img2 from "../../assets/outputex.jpg";
 import gray_img from "../../assets/gray_img.jpg"
@@ -20,6 +20,7 @@ import Webcam  from "react-webcam";
 function InsertionPage() {
   const [selectedFile, setSelectedFile] = useState(null);
   const [Choose, setChoose] = useState(false);
+  const [img, setImg] = useState(false);
   const fileInputRef = useRef(null);
   const img_prev = useRef(null);
   const [loading, setLoading] = useState(false);
@@ -38,6 +39,24 @@ function InsertionPage() {
     }, 3000);
 
   };
+
+  const [imageUrl, setImageUrl] = useState('');
+  const [image, setImage] = useState(null)
+  const [result, setResult] = useState('');
+
+
+
+  const handleFileChange = (event) => {
+    const file = event.target.files[0];
+    const reader = new FileReader();
+    reader.onloadend = () => {
+      setImageUrl(reader.result);
+    };
+    if (file) {
+      reader.readAsDataURL(file);
+      setImage(file)
+      setResult('')
+
   const handleFileChange = async (event) => {
     setSelectedFile(event.target.files[0]);
     event.preventDefault()
@@ -57,6 +76,7 @@ function InsertionPage() {
       setImg(resJson.url)
     }else{
       alert(resJson.error)
+
     }
   };
 
@@ -64,19 +84,47 @@ function InsertionPage() {
     fileInputRef.current.click();
   };
 
-  const handlePredClick = () => {
-    startLoading()
-    if (selectedFile) {
-      // Perform file upload logic here
-      console.log("Uploading file:", selectedFile);
-      // You can use FormData to upload the file via API
-      // const formData = new FormData();
-      // formData.append('file', selectedFile);
-      // axios.post('/upload', formData);
-    } else {
-      console.log("Error");
+  const handlePredClick = async (e) => {
+    e.preventDefault()
+    const form = new FormData()
+    form.append("user", window.localStorage.getItem("user_id"))
+    form.append("image", image)
+    const res = await fetch("http://127.0.0.1:8000/api/image-upload/",{
+      method:"POST",
+      // headers:{
+      //   "Content-Type":"application/json"
+      // },
+      body:form
+    })
+    const resJson = await res.json()
+    if(resJson.status=="ok"){
+      console.log(resJson.data.image)
+    }
+    else{
+      alert(resJson.error)
     }
   };
+
+
+  const handlePredict = async(e)=>{
+    e.preventDefault();
+    const res = await fetch("http://127.0.0.1:8000/api/image-detect/",{
+      method:"POST",
+      headers:{
+        "Content-Type":"application/json"
+      },
+      body:JSON.stringify({
+        "user_id": window.localStorage.getItem("user_id")
+      })
+    })
+    const resJson = await res.json()
+    if(resJson.status=="ok"){
+      setImageUrl("http://127.0.0.1:8000/"+resJson.url)
+    }
+    else{
+      alert(resJson.error)
+    }
+  }
 
   const handleWebcam = () => {
     if(openWebCam){
@@ -86,6 +134,7 @@ function InsertionPage() {
     }
     
   };
+
 
   return (
     <>
@@ -100,15 +149,28 @@ function InsertionPage() {
           ref={fileInputRef}
           className="file-input"
           type="file"
+          value={selectedFile}
           onChange={handleFileChange}
           style={{ display: "none" }} // Hide the file input
         />
         <div className="preview" >
+
+          <img ref={img_prev} src={imageUrl} alt="" width={920} height={920}/>
+        </div>
+        <ProcessingBar loading={loading} />
+        <button className="button center" onClick={handlePredClick}>
+          <AddCircleOutlineIcon />
+          Send
+        </button>
+        <button className="button center" onClick={handlePredict}>
+          <AddCircleOutlineIcon />
+
           <img ref={img_prev} src={img} alt="" width={920} height={920}/>
         </div>
         <ProcessingBar loading={loading} />
         <button className="button center" onClick={handlePredClick}>
           <OnlinePredictionIcon/>
+
           Predict
         </button>
       </div>

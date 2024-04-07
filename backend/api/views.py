@@ -45,24 +45,23 @@ class LoginView(APIView):
 
 class ImagesSendView(APIView):
     serializer_class = ImagesSerializer
-    
-    @method_decorator(require_POST)
     def post(self, request, *args, **kwargs):
         try:
             serializer = self.serializer_class(data=request.data)
-            user = User.objects.get(id = request.data.get("user",None))
-            if(user == None):
-                return Response({"status":"unauthorized","error":"login required"}, status=status.HTTP_401_UNAUTHORIZED)
-            if serializer.is_valid(raise_exception=True):
+            print("data: ",request.data)
+            if serializer.is_valid():
                 serializer.save()
+
+                return Response({"status": "ok", "data": serializer.data}, status=status.HTTP_201_CREATED)
+
                 return Response({"status":"ok","url":serializer.data['image']}, status=status.HTTP_201_CREATED)
+
             else:
-                return Response({"status":"exception","error":"can't be created"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+                return Response({"status": "error", "error": serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
         except Exception as e:
-            return Response({"status":"exception","error":f"some internal error occured: {e}"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+            return Response({"status": "exception", "error": f"Internal server error: {e}"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
         
 class Detect(APIView):
-    
     @method_decorator(require_POST)
     def post(self, request):
         try:
