@@ -24,7 +24,7 @@ function Home() {
             <img src={img2} alt="patch2" className="patch2" />
             <div className="button_start">
 
-              <Link to='/let-start' className="button center">Let's Start</Link>
+              {/* <Link to='/let-start' className="button center">Let's Start</Link> */}
 
               <a href="/let-start" className="buttonmain center">Let's Start</a>
             </div>
