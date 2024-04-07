@@ -69,6 +69,10 @@
     background: linear-gradient(142deg, rgba(223,185,29,0.9) 0%, rgba(255, 255, 255, 0.712) 100%);
 }
 
+.discover:hover{
+    background: rgb(223,185,29);
+}
+
 .buttonmain {
     /* background-color: #4CAF50;  */
     border: none;
@@ -86,6 +90,10 @@
     /* border-radius: 12px;  */
     background-image: linear-gradient(to right, #20c8f7, #eef5fb75); 
 
+  }
+
+  .buttonmain:hover{
+    background: rgba(16,191,209,1);
   }
   
   .button_start{
