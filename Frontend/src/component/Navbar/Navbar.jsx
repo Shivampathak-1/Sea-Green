@@ -1,7 +1,8 @@
 import React from 'react'
 import './Navbar.css'
-import logo from '../../assets/logo.png'
+import logo from '../../assets/logoc.jpg'
 import profile from '../../assets/profile.png'
+import { Link } from 'react-router-dom'
 function Navbar() {
   return (
     <>
@@ -9,7 +10,7 @@ function Navbar() {
       <div className="h-14 flex justify-between items-center" id ='navbar'>
           <div className="left">
             <span className=' ml-10 ' id='logoName'>SeaGreen</span>
-            {/* <img src={logo} alt="logo" className=' ml-10' /> */}
+            {/* <img src={logo} alt="logo" className=' ml-10 h-11 w-11 rounded-2xl' /> */}
           </div>
           <div className="right flex justify-between items-center gap-16">
             <div className='menubtn'>
@@ -21,9 +22,9 @@ function Navbar() {
             </ul>
 
             </div>
-            <div className=' mr-20 rounded'>
+            <Link to='/login' className=' mr-20 rounded'>
               <img src={profile} className=' h-10 rounded-2xl' alt="Profile Image" />
-            </div>
+            </Link>
           </div>
       </div>
     </>

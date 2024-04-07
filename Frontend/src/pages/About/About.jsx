@@ -1,16 +1,45 @@
 import React from "react";
 import "./About.css";
 import img from "../../assets/Mask_group.png";
+import imgNik from "../../assets/nikhilK.jpg";
+import imgMan from "../../assets/my.jpg";
+import imgshiv from "../../assets/shiv.jpg";
+import imgchi from "../../assets/chirand.jpg";
+
+import imgnd from "../../assets/nd.jpg";
+
 function Home() {
   const people = [
     {
-      name: 'xyz',
-      role: '',
-      imageUrl:
-        'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+      name: "Manasvi Gaur",
+      role: "Frontend Developer",
+       image: imgMan,
     },
-    // More people...
-  ]
+    {
+      name: "Nikhil Kumar",
+      role: "Backend Developer",
+      image:
+        imgNik,
+    },
+    {
+      name: "Shivam Kumar",
+      role: "Frontend Developer",
+      image:
+        imgshiv,
+    },
+    {
+      name: "Nikhil Deshmukh",
+      role: "UI/UX ",
+      image:
+        imgnd,
+    },
+    {
+      name: "Chirag Verma",
+      role: "Data Analyst",
+      image:
+        imgchi,
+    },
+  ];
 
   return (
     <>
@@ -30,27 +59,27 @@ function Home() {
               <div className=" py-24 sm:py-32 ">
               <div className="mx-auto grid max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-3">
                 <div className="max-w-2xl">
-                  <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                  <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
                     Meet our Team
                   </h2>
                 </div>
                 <ul
                   role="list"
-                  className="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2"
+                  className="  grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2"
                 >
                   {people.map((person) => (
                     <li key={person.name}>
-                      <div className="flex items-center gap-x-6">
+                      <div className=" pagemm flex items-center gap-x-6">
                         <img
-                          className="h-16 w-16 rounded-full"
-                          src={person.imageUrl}
+                          className="h-16 w-16 rounded-full "
+                          src={person.image}
                           alt=""
                         />
                         <div>
-                          <h3 className="text-base font-semibold leading-7 tracking-tight text-gray-900">
+                          <h3 className="text-base font-bold leading-8 tracking-tight text-white">
                             {person.name}
                           </h3>
-                          <p className="text-sm font-semibold leading-6 text-indigo-600">
+                          <p className="text-sm font-semibold leading-6 text-white">
                             {person.role}
                           </p>
                         </div>

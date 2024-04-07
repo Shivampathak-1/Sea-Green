@@ -4,8 +4,13 @@ import img1 from "../../assets/Group2(1).png";
 import img2 from "../../assets/outputex.jpg";
 import gray_img from "../../assets/gray_img.jpg"
 import "./InsertionPage.css";
-import AddCircleOutlineIcon from "@mui/icons-material/AddAPhotoRounded";
+import AddIcon from '@mui/icons-material/Add';
+import CameraAltIcon from '@mui/icons-material/CameraAlt';
+import OnlinePredictionIcon from '@mui/icons-material/OnlinePrediction';
 import ProcessingBar from '../../component/Proccessbar/Proccessbar.jsx';
+import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
+import Webcam  from "react-webcam";
+
 {
   /* <input type="file" onChange={handleFileChange} />
       <button onClick={handleUpload}>Upload</button>
@@ -18,6 +23,7 @@ function InsertionPage() {
   const fileInputRef = useRef(null);
   const img_prev = useRef(null);
   const [loading, setLoading] = useState(false);
+  const [openWebCam, setopenWebCam] = useState(false);
 
   const startLoading = () => {
     setLoading(true);
@@ -50,11 +56,22 @@ function InsertionPage() {
     }
   };
 
+  const handleWebcam = () => {
+    if(openWebCam){
+        setopenWebCam(false);
+    }else{
+    setopenWebCam(true);
+    }
+    
+  };
+
   return (
     <>
+       <button onClick={handleWebcam} style={{marginTop:"3vmax",marginLeft:"2vmax"}}><CameraAltIcon/></button> 
+       {openWebCam && <Webcam />}
       <div className="button-container">
         <button className="button" onClick={handleButtonClick}>
-          <AddCircleOutlineIcon />
+          <AddIcon/>
           Insert
         </button>
         <input
@@ -69,7 +86,7 @@ function InsertionPage() {
         </div>
         <ProcessingBar loading={loading} />
         <button className="button center" onClick={handlePredClick}>
-          <AddCircleOutlineIcon />
+          <OnlinePredictionIcon/>
           Predict
         </button>
       </div>
