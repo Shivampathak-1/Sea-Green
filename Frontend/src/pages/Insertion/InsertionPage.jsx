@@ -20,7 +20,7 @@ import Webcam  from "react-webcam";
 function InsertionPage() {
   const [selectedFile, setSelectedFile] = useState(null);
   const [Choose, setChoose] = useState(false);
-  const [img, setImg] = useState(false);
+  // const [img, setImg] = useState(false);
   const fileInputRef = useRef(null);
   const img_prev = useRef(null);
   const [loading, setLoading] = useState(false);
@@ -56,29 +56,10 @@ function InsertionPage() {
       reader.readAsDataURL(file);
       setImage(file)
       setResult('')
-
-  const handleFileChange = async (event) => {
-    setSelectedFile(event.target.files[0]);
-    event.preventDefault()
-    const form = new FormData()
-    form.append("image", selectedFile)
-    form.append("user",window.localStorage.getItem("user_id"))
-    const res = await fetch("http://127.0.0.1:8000/api/image-upload/", {
-      method:"POST",
-      headers:{
-        "Content-Type": "application/json"
-      },
-      body:JSON.stringify(form)
-    })
-
-    const resJson = await res.json()
-    if(resJson.status=="ok"){
-      setImg(resJson.url)
-    }else{
-      alert(resJson.error)
-
     }
-  };
+  }
+
+
 
   const handleButtonClick = () => {
     fileInputRef.current.click();
@@ -91,9 +72,7 @@ function InsertionPage() {
     form.append("image", image)
     const res = await fetch("http://127.0.0.1:8000/api/image-upload/",{
       method:"POST",
-      // headers:{
-      //   "Content-Type":"application/json"
-      // },
+
       body:form
     })
     const resJson = await res.json()
@@ -162,13 +141,8 @@ function InsertionPage() {
           <AddCircleOutlineIcon />
           Send
         </button>
-        <button className="button center" onClick={handlePredict}>
-          <AddCircleOutlineIcon />
-
-          <img ref={img_prev} src={img} alt="" width={920} height={920}/>
-        </div>
         <ProcessingBar loading={loading} />
-        <button className="button center" onClick={handlePredClick}>
+        <button className="button center" onClick={handlePredict}>
           <OnlinePredictionIcon/>
 
           Predict
