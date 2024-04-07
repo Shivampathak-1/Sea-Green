@@ -22,20 +22,20 @@ function SignUp() {
             <label htmlFor="contact">Phone No.</label>
             <input type="number" id="contact" placeholder="Phone No." />
           </div>
+          <div className="confpass regalign">
+            <label htmlFor="username">Username</label>
+            <input
+              type="text"
+              id="username"
+              placeholder="Enter username"
+            />
+          </div>
           <div className="passw regalign">
             <label htmlFor="password">Password</label>
             <input
               type="password"
               id="regpassword"
               placeholder="Enter your password"
-            />
-          </div>
-          <div className="confpass regalign">
-            <label htmlFor="conpswd">Confirm Password</label>
-            <input
-              type="text"
-              id="conpswd"
-              placeholder="Re-enter your password"
             />
           </div>
           <div className="subm">
