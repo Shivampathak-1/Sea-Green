@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from rest_framework.views import APIView
+from rest_framework.generics import GenericAPIView
 from .serializers import UserSerializer, ImagesSerializer
 from rest_framework import status
 from rest_framework.response import Response
@@ -19,7 +20,7 @@ from django.views.decorators.csrf import csrf_exempt
 
 # Create your views here.
 
-class RegisterView(APIView):
+class RegisterView(GenericAPIView):
     serializer_class = UserSerializer
     queryset = User.objects.all()
     
@@ -43,7 +44,7 @@ class LoginView(APIView):
         else:
             return Response({"status": 400, "message": "user doesn't exist!"}, status=status.HTTP_400_BAD_REQUEST)
 
-class ImagesSendView(APIView):
+class ImagesSendView(GenericAPIView):
     serializer_class = ImagesSerializer
     def post(self, request, *args, **kwargs):
         try:
@@ -54,7 +55,6 @@ class ImagesSendView(APIView):
 
                 return Response({"status": "ok", "data": serializer.data}, status=status.HTTP_201_CREATED)
 
-                return Response({"status":"ok","url":serializer.data['image']}, status=status.HTTP_201_CREATED)
 
             else:
                 return Response({"status": "error", "error": serializer.errors}, status=status.HTTP_400_BAD_REQUEST)

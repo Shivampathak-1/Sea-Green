@@ -40,7 +40,7 @@ function InsertionPage() {
 
   };
 
-  const [imageUrl, setImageUrl] = useState('');
+  const [imageUrl, setImageUrl] = useState(null);
   const [image, setImage] = useState(null)
   const [result, setResult] = useState('');
 
@@ -78,6 +78,7 @@ function InsertionPage() {
     const resJson = await res.json()
     if(resJson.status=="ok"){
       console.log(resJson.data.image)
+      alert("Data sent!")
     }
     else{
       alert(resJson.error)
@@ -134,7 +135,7 @@ function InsertionPage() {
         />
         <div className="preview" >
 
-          <img ref={img_prev} src={imageUrl} alt="" width={920} height={920}/>
+          <img ref={img_prev} src={imageUrl} width={920} height={920}/>
         </div>
         <ProcessingBar loading={loading} />
         <button className="button center" onClick={handlePredClick}>
